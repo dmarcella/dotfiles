@@ -1,0 +1,46 @@
+[user]
+	name = David Marcella
+	email = marcella2113@gmail.com
+[difftool "Kaleidoscope"]
+    cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+	guitool = Kaleidoscope
+[core]
+	quotepath = false
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[alias]
+  g = git
+  ga = git add
+  gp = git push
+  gl = git log
+  gs = git status
+  gd = git diff
+  gm = git commit -m
+  gma = git commit -am
+  gb = git branch
+  gc = git checkout
+  gra = git remote add
+  grr = git remote rm
+  gpu = git pull
+  gcl = git clone
+[core]
+  quotepath = false
