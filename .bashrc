@@ -14,7 +14,7 @@ alias mkdir='mkdir -p'
 alias ...='../..'
 alias l='ls'
 alias ll='ls -al'
-alias lh='ls -Alh
+alias lh='ls -Alh'
 
 alias m.='mate .'
 alias m='mate'
@@ -47,3 +47,11 @@ GREEN="\[\033[0;32m\]"
 NO_COLOUR="\[\033[0m\]"
 
 export PS1="[$YELLOW\\w$NO_COLOUR]$RED\$(parse_git_branch)$NO_COLOUR\\$ "
+
+# git completion
+source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
+
+# bash completion
+if [ -f /opt/local/etc/bash_completion ]; then
+    . /opt/local/etc/bash_completion
+fi
