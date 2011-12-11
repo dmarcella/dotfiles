@@ -1,7 +1,7 @@
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 
-alias mysql_start="sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysqld.plist"
-alias mysql_stop="sudo launchctl unload -w /Library/LaunchDaemons/com.mysql.mysqld.plist"
+alias mysql_start="mysql.server start"
+alias mysql_stop="mysql.server stop"
 
 alias tomcat_start="src/apache-tomcat-7.0.12/bin/startup.sh"
 alias tomcat_stop="src/apache-tomcat-7.0.12/bin/shutdown.sh"
@@ -48,10 +48,6 @@ NO_COLOUR="\[\033[0m\]"
 
 export PS1="[$YELLOW\\w$NO_COLOUR]$RED\$(parse_git_branch)$NO_COLOUR\\$ "
 
-# git completion
-source `brew --prefix git`/etc/bash_completion.d/git-completion.bash
-
-# bash completion
-if [ -f /opt/local/etc/bash_completion ]; then
-    . /opt/local/etc/bash_completion
+if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash  ]; then
+  . `brew --prefix`/etc/bash_completion.d/git-completion.bash 
 fi
