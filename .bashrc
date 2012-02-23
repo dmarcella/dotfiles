@@ -1,11 +1,14 @@
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 
+# mysql
 alias mysql_start="mysql.server start"
 alias mysql_stop="mysql.server stop"
 
+# tomcat
 alias tomcat_start="src/apache-tomcat-7.0.12/bin/startup.sh"
 alias tomcat_stop="src/apache-tomcat-7.0.12/bin/shutdown.sh"
 
+# filesystem
 alias ..='cd ..'
 alias -- -='cd -'
 alias tlf="tail -f"
@@ -16,9 +19,11 @@ alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
 
+# textmate
 alias m.='mate .'
 alias m='mate'
 
+# git
 alias g='git'
 alias ga='git add'
 alias gp='git push'
