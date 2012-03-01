@@ -19,6 +19,11 @@ alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
 
+# shortcuts
+alias d="cd ~/Dropbox"
+alias dd="cd ~/Dropbox/Development"
+alias reload="source ~/.profile"
+
 # textmate
 alias m.='mate .'
 alias m='mate'
