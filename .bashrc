@@ -1,4 +1,6 @@
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Users/dmarcella/bin:$PATH"
+
+PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++')
 
 # mysql
 alias mysql_start="mysql.server start"
@@ -27,6 +29,10 @@ alias reload="source ~/.profile"
 # textmate
 alias m.='mate .'
 alias m='mate'
+
+# sublime text 2
+alias s.='subl .'
+alias s='subl'
 
 # git
 alias g='git'
