@@ -1,6 +1,10 @@
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Users/dmarcella/bin:$PATH"
+# we want the various sbins on the path along with /usr/local/bin
+PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin"
+PATH="/usr/local/bin:$PATH"
 
-PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++')
+# put ~/bin on PATH if you have it
+test -d "$HOME/bin" &&
+PATH="$HOME/bin:$PATH"
 
 # mysql
 alias mysql_start="mysql.server start"
@@ -11,20 +15,24 @@ alias tomcat_start="src/apache-tomcat-7.0.12/bin/startup.sh"
 alias tomcat_stop="src/apache-tomcat-7.0.12/bin/shutdown.sh"
 
 # filesystem
-alias ..='cd ..'
-alias -- -='cd -'
+alias ..='cd ..'         # Go up one directory
+alias ...='cd ../..'     # Go up two directories
+alias ....='cd ../../..' # Go up three directories
+alias -- -="cd -"        # Go back
 alias tlf="tail -f"
 alias ln='ln -v'
 alias mkdir='mkdir -p'
-alias ...='../..'
 alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
+alias fn='find . -name'
+alias hi='history | tail -20'
 
 # shortcuts
 alias d="cd ~/Dropbox"
 alias dd="cd ~/Dropbox/Development"
-alias reload="source ~/.profile"
+alias tw="cd ~/Documents/tambora-workspace"
+alias reload="source ~/.bashrc"
 
 # textmate
 alias m.='mate .'
