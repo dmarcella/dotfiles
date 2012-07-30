@@ -72,11 +72,7 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
 }
 
-ORANGE="\e[38;5;208m"
-RED="\e[38;5;196m"
-NO_COLOUR="\[\033[0m\]"
-
-export PS1="$RED\\w $NO_COLOUR$ORANGE\$(parse_git_branch)$NO_COLOUR\\$ "
+export PS1='\[\033[0;36m\]\w \[\033[0;31m\]$(parse_git_branch)\[\033[0m\]$ '
 
 if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash  ]; then
   . `brew --prefix`/etc/bash_completion.d/git-completion.bash 
