@@ -1,32 +1,14 @@
 [user]
-	name = David Marcella
-	email = marcella2113@gmail.com
-[difftool "Kaleidoscope"]
-    cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
-[difftool]
-	prompt = false
-[diff]
-	tool = Kaleidoscope
-	guitool = Kaleidoscope
+  name = David Marcella
+  email = marcella2113@gmail.com
 [core]
-	quotepath = false
+  quotepath = false
+  excludesfile = /Users/dmarcella/.gitignore_global
 [color]
   branch = auto
   diff = auto
   status = auto
-[color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
-[color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
-[color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+  ui = auto
 [alias]
   g = git
   ga = git add
@@ -42,5 +24,9 @@
   grr = git remote rm
   gpu = git pull
   gcl = git clone
-[core]
-  quotepath = false
+[difftool "Kaleidoscope"]
+  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+  prompt = false
+[diff]
+  tool = Kaleidoscope
