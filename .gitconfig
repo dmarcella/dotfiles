@@ -1,32 +1,52 @@
 [user]
-  name = David Marcella
-  email = marcella2113@gmail.com
+	name = David Marcella
+	email = marcella2113@gmail.com
+	
 [core]
-  quotepath = false
-  excludesfile = /Users/dmarcella/.gitignore_global
+	quotepath = false
+	excludesfile = /Users/dmarcella/.gitignore_global
+	
 [color]
-  branch = auto
-  diff = auto
-  status = auto
-  ui = auto
-[alias]
-  g = git
-  ga = git add
-  gp = git push
-  gl = git log
-  gs = git status
-  gd = git diff
-  gm = git commit -m
-  gma = git commit -am
-  gb = git branch
-  gc = git checkout
-  gra = git remote add
-  grr = git remote rm
-  gpu = git pull
-  gcl = git clone
-[difftool "Kaleidoscope"]
-  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
-[difftool]
-  prompt = false
+	branch = auto
+	diff = auto
+	status = auto
+	ui = auto
+
+################################################################################
+
 [diff]
-  tool = Kaleidoscope
+	tool = Kaleidoscope
+	
+[difftool]
+	prompt = false
+	
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+[merge]
+	tool = Kaleidoscope
+	
+[mergetool]
+	prompt = false
+	
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+
+################################################################################
+	
+[alias]
+	g = git
+	ga = git add
+	gp = git push
+	gl = git log
+	gs = git status
+	gd = git diff
+	gm = git commit -m
+	gma = git commit -am
+	gb = git branch
+	gc = git checkout
+	gra = git remote add
+	grr = git remote rm
+	gpu = git pull
+	gcl = git clone
