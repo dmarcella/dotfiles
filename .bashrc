@@ -84,3 +84,6 @@ if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash  ]; then
 fi
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+### Adding the Play Framework
+export PATH=$PATH:/Users/dmarcella/src/play2.0
