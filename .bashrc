@@ -86,4 +86,4 @@ fi
 export PATH="/usr/local/heroku/bin:$PATH"
 
 ### Adding the Play Framework
-export PATH=$PATH:/Users/dmarcella/src/play2.0
+export PATH=$PATH:/Users/dmarcella/src/play
