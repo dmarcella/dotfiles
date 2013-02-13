@@ -1,5 +1,5 @@
 # we want the various sbins on the path along with /usr/local/bin
-PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin"
+PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/share/npm/bin"
 PATH="/usr/local/bin:$PATH"
 
 # put ~/bin on PATH if you have it
@@ -17,6 +17,9 @@ alias psql_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 # tomcat
 alias tomcat_8081="mvn -Dmaven.tomcat.port=8081 tomcat:run"
 alias tomcat_8082="mvn -Dmaven.tomcat.port=8082 tomcat:run"
+
+# jenkins
+alias jenkins_start="java -jar /usr/local/opt/jenkins/libexec/jenkins.war --httpPort=8081 --ajp13Port=8010"
 
 # filesystem
 alias ..="cd .."         # Go up one directory
