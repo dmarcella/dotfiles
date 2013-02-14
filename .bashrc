@@ -1,5 +1,5 @@
 # we want the various sbins on the path along with /usr/local/bin
-PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/share/npm/bin"
+PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin"
 PATH="/usr/local/bin:$PATH"
 
 # put ~/bin on PATH if you have it
@@ -90,3 +90,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ### Adding the Play Framework
 export PATH=$PATH:/Users/dmarcella/src/play
+
+### Adding npm
+export PATH=$PATH:/usr/local/share/npm/bin
