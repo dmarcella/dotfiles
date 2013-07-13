@@ -14,10 +14,6 @@ alias mysql_stop="mysql.server stop"
 alias psql_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias psql_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
-# tomcat
-alias tomcat_8081="mvn -Dmaven.tomcat.port=8081 tomcat:run"
-alias tomcat_8082="mvn -Dmaven.tomcat.port=8082 tomcat:run"
-
 # jenkins
 alias jenkins_start="java -jar /usr/local/opt/jenkins/libexec/jenkins.war --httpPort=8081 --ajp13Port=8010"
 
@@ -37,8 +33,6 @@ alias hi="history | tail -20"
 
 # shortcuts
 alias d="cd ~/Dropbox"
-alias dd="cd ~/Dropbox/Development"
-alias tw="cd ~/Documents/tambora-workspace"
 alias reload="source ~/.bashrc"
 
 # textmate
@@ -52,7 +46,7 @@ alias s="subl"
 # git
 alias g="git"
 alias ga="git add"
-alias gp="git push"
+# alias gp="git push"
 alias gl="git log"
 alias gs="git status"
 alias gd="git diff"
