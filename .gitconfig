@@ -38,8 +38,8 @@
 [alias]
 	g = git
 	ga = git add
-	gp = git push
 	gl = git log
+	l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
 	gs = git status
 	gd = git diff
 	gm = git commit -m
@@ -50,3 +50,7 @@
 	grr = git remote rm
 	gpu = git pull
 	gcl = git clone
+	ksshow = "!f() { local SHA=${1:-HEAD}; git difftool -y -t Kaleidoscope $SHA^..$SHA; }; f"
+	ksreview = "!f() { local SHA=${1:-HEAD}; local BRANCH=${2:-master}; if [ $SHA == $BRANCH ]; then SHA=HEAD; fi; git difftool -y -t Kaleidoscope $BRANCH...$SHA; }; f"
+# [push]
+# 	default = simple
