@@ -11,11 +11,10 @@ alias mysql_start="mysql.server start"
 alias mysql_stop="mysql.server stop"
 
 # postgresql
-alias psql_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias psql_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+alias psql_start="postgres -D /usr/local/var/postgres"
 
-# jenkins
-alias jenkins_start="java -jar /usr/local/opt/jenkins/libexec/jenkins.war --httpPort=8081 --ajp13Port=8010"
+# mongodb
+alias mongo_start="mongod --config /usr/local/etc/mongod.conf"
 
 # filesystem
 alias ..="cd .."         # Go up one directory
@@ -38,9 +37,9 @@ alias reload="source ~/.bashrc"
 alias m.="mate ."
 alias m="mate"
 
-# sublime text 2
-alias s.="subl ."
-alias s="subl"
+# github atom
+alias a.="atom ."
+alias a="atom"
 
 # git
 alias g="git"
@@ -81,27 +80,27 @@ function parse_git_branch {
 export PS1='\[\033[0;36m\]\w \[\033[0;31m\]$(parse_git_branch)\[\033[0m\]$ '
 
 if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash  ]; then
-  . `brew --prefix`/etc/bash_completion.d/git-completion.bash 
+  . `brew --prefix`/etc/bash_completion.d/git-completion.bash
 fi
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-### Adding the Play Framework
-export PATH=$PATH:/Users/dmarcella/src/play
-
 ### Adding npm
 export PATH=$PATH:/usr/local/share/npm/bin
 
+### Adding Activator
+export PATH=$PATH:/Users/dmarcella/src/activator-1.2.3
+
 ### http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
 export MARKPATH=$HOME/.marks
-function jump { 
+function jump {
     cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
 }
-function mark { 
+function mark {
     mkdir -p $MARKPATH; ln -s $(pwd) $MARKPATH/$1
 }
-function unmark { 
-    rm -i $MARKPATH/$1 
+function unmark {
+    rm -i $MARKPATH/$1
 }
 function marks {
     \ls -l $MARKPATH | tail -n +2 | sed 's/  / /g' | cut -d' ' -f9- | awk -F ' -> ' '{printf "%-10s -> %s\n", $1, $2}'
