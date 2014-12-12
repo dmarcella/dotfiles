@@ -1,11 +1,33 @@
 ## dotfiles
-These are config files to set up a system the way I like it.
+This is a basic checklist I follow to set up a new Mac's development environment.
 
-ln -s /any/file/on/the/disk linked-file
+## Contents
 
-Create symbolic links for the following files from the HOME directory
-.profile
-.bashrc
-.gitconfig
-.gitignore
-.jump
+| File | Description |
+| --- | --- |
+| `.bashrc` | Customizes the Terminal.app prompt and echos the currently checked out Git branch. |
+| `.gitconfig` | Global Git configuration to specify my name and email, shortcuts, colors, and more. |
+| `.gitignore` | The ignore file that I use everywhere. |
+| `.jump` | Quickly navigate your filesystem from the command-line. |
+
+## Checklist
+
+### 1. Prep OS X
+
+- Download and install latest version of Xcode from the Mac App Store
+- Download and install Xcode command line tools
+
+### 2. Download dependencies
+
+- Download and run the [Node.js Mac installer](http://nodejs.org/download/)
+
+### 3. Secure Git(Hub) access
+
+- [Generate new SSH key](https://help.github.com/articles/generating-ssh-keys/)
+- [Generate an access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) for Terminal to auth your GitHub account when 2FA is enabled
+
+### 4. Prep Terminal.app
+
+- Load [`.bashrc`](/master/.bashrc)
+- Load [`.gitconfig`](/master/.gitconfig) contents into the global `~/.gitconfig`
+- Tweak color scheme
