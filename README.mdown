@@ -9,6 +9,7 @@ This is a basic checklist I follow to set up a new Mac's development environment
 | `.gitconfig` | Global Git configuration to specify my name and email, shortcuts, colors, and more. |
 | `.gitignore` | The ignore file that I use everywhere. |
 | `.jump` | Quickly navigate your filesystem from the command-line. |
+| `.brew` | Downloads up my most used homebrew packages. |
 
 ## Checklist
 
