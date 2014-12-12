@@ -1,2 +1,11 @@
 ## dotfiles
 These are config files to set up a system the way I like it.
+
+ln -s /any/file/on/the/disk linked-file
+
+Create symbolic links for the following files from the HOME directory
+.profile
+.bashrc
+.gitconfig
+.gitignore
+.jump

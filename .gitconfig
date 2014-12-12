@@ -1,12 +1,12 @@
 [user]
 	name = David Marcella
 	email = marcella2113@gmail.com
-	
+
 [core]
 	quotepath = false
 	excludesfile = /Users/dmarcella/.gitignore_global
 	editor = mate -w
-	
+
 [color]
 	branch = auto
 	diff = auto
@@ -17,19 +17,19 @@
 
 [diff]
 	tool = Kaleidoscope
-	
+
 [difftool]
 	prompt = false
-	
+
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
 [merge]
 	tool = Kaleidoscope
-	
+
 [mergetool]
 	prompt = false
-	
+
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
@@ -56,9 +56,6 @@
 	############ List all your Aliases
 	la = "!git config -l | grep alias | cut -c 7-"
 
-	############ Rename [branch] to done-[branch]
-	done = "!f() { git branch | grep "$1" | cut -c 3- | grep -v done | xargs -I{} git branch -m {} done-{}; }; f"
-
 	############ Assume aliases
 	assume = update-index --assume-unchanged
 	unassume = update-index --no-assume-unchanged
@@ -68,12 +65,6 @@
 
 	############ Tag aliases
 	lasttag = describe --tags --abbrev=0
-	ksshow = "!f() { local SHA=${1:-HEAD}; git difftool -y -t Kaleidoscope $SHA^..$SHA; }; f"
-	ksreview = "!f() { local SHA=${1:-HEAD}; local BRANCH=${2:-master}; if [ $SHA == $BRANCH ]; then SHA=HEAD; fi; git difftool -y -t Kaleidoscope $BRANCH...$SHA; }; f"
-
-	############ Merge aliases
-	ours = "!f() { git co --ours $@ && git add $@; }; f"
-	theirs = "!f() { git co --theirs $@ && git add $@; }; f"
 
 	############ Basic Shortcuts
 	g = git
@@ -82,21 +73,6 @@
 	cl = clone
 	ci = commit
 	co = checkout
-	br = branch 
+	br = branch
 	diff = diff --word-diff
 	dc = diff --cached
-
-	############ Reset commands
-	r = reset
-	r1 = reset HEAD^
-	r2 = reset HEAD^^
-	rh = reset --hard
-	rh1 = reset HEAD^ --hard
-	rh2 = reset HEAD^^ --hard
-
-	############ Stash operations
-	sl = stash list
-	sa = stash apply
-	ss = stash save
-# [push]
-# 	default = simple

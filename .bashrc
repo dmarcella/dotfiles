@@ -6,10 +6,6 @@ PATH="/usr/local/bin:$PATH"
 test -d "$HOME/bin" &&
 PATH="$HOME/bin:$PATH"
 
-# mysql
-alias mysql_start="mysql.server start"
-alias mysql_stop="mysql.server stop"
-
 # postgresql
 alias psql_start="postgres -D /usr/local/var/postgres"
 
@@ -31,7 +27,8 @@ alias hi="history | tail -20"
 
 # shortcuts
 alias d="cd ~/Dropbox"
-alias reload="source ~/.bashrc"
+alias reload="source ~/.bashrc && echo 'Done!'"
+alias ps="python -m SimpleHTTPServer 4000"
 
 # textmate
 alias m.="mate ."
@@ -63,12 +60,8 @@ alias gcl="git clone"
 alias grh="git reset HEAD"
 alias undo="git reset --soft HEAD^"
 
-# Recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
-
-# Show/hide hidden files in Finder
-alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
-alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
 
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
@@ -91,22 +84,4 @@ export PATH=$PATH:/usr/local/share/npm/bin
 ### Adding Activator
 export PATH=$PATH:/Users/dmarcella/src/activator-1.2.3
 
-### http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
-export MARKPATH=$HOME/.marks
-function jump {
-    cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
-}
-function mark {
-    mkdir -p $MARKPATH; ln -s $(pwd) $MARKPATH/$1
-}
-function unmark {
-    rm -i $MARKPATH/$1
-}
-function marks {
-    \ls -l $MARKPATH | tail -n +2 | sed 's/  / /g' | cut -d' ' -f9- | awk -F ' -> ' '{printf "%-10s -> %s\n", $1, $2}'
-}
-_jump() {
-    local cur=${COMP_WORDS[COMP_CWORD]}
-    COMPREPLY=( $(compgen -W "$( ls $MARKPATH )" -- $cur) )
-}
-complete -F _jump jump
+source ~/.jump
