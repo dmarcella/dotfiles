@@ -6,10 +6,8 @@ PATH="/usr/local/bin:$PATH"
 test -d "$HOME/bin" &&
 PATH="$HOME/bin:$PATH"
 
-# postgresql
+# databases
 alias psql_start="postgres -D /usr/local/var/postgres"
-
-# mongodb
 alias mongo_start="mongod --config /usr/local/etc/mongod.conf"
 
 # filesystem
@@ -17,9 +15,6 @@ alias ..="cd .."         # Go up one directory
 alias ...="cd ../.."     # Go up two directories
 alias ....="cd ../../.." # Go up three directories
 alias -- -="cd -"        # Go back
-alias tlf="tail -f"
-alias ln="ln -v"
-alias mkdir="mkdir -p"
 alias l="ls"
 alias ll="ls -Alh"
 alias fn="find . -name"
@@ -29,12 +24,17 @@ alias hi="history | tail -20"
 alias d="cd ~/Dropbox"
 alias reload="source ~/.bashrc && echo 'Done!'"
 alias ps="python -m SimpleHTTPServer 4000"
+alias editgit='atom ~/.gitconfig'
+alias editbash='atom ~/.bashrc'
 
-# textmate
+## Switch repos
+DIR=~/Documents/projects
+alias h='cd ~/'
+alias w='cd ${DIR}'
+
+# applications
 alias m.="mate ."
 alias m="mate"
-
-# github atom
 alias a.="atom ."
 alias a="atom"
 
@@ -56,7 +56,6 @@ alias gc="git checkout"
 alias gra="git remote add"
 alias grr="git remote rm"
 alias gpu="git pull"
-alias gcl="git clone"
 alias grh="git reset HEAD"
 alias undo="git reset --soft HEAD^"
 
@@ -75,6 +74,7 @@ export PS1='\[\033[0;36m\]\w \[\033[0;31m\]$(parse_git_branch)\[\033[0m\]$ '
 if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash  ]; then
   . `brew --prefix`/etc/bash_completion.d/git-completion.bash
 fi
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
