@@ -10,7 +10,6 @@ brew upgrade
 brew install bash-completion
 brew install git
 brew install mongodb
-brew install mysql
 brew install node
 brew install postgresql
 brew install sbt
