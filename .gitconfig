@@ -5,7 +5,6 @@
 [core]
 	quotepath = false
 	excludesfile = /Users/dmarcella/.gitignore_global
-	editor = mate -w
 
 [color]
 	branch = auto

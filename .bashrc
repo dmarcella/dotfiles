@@ -33,8 +33,6 @@ alias h='cd ~/'
 alias w='cd ${DIR}'
 
 # applications
-alias m.="mate ."
-alias m="mate"
 alias a.="atom ."
 alias a="atom"
 
@@ -53,8 +51,6 @@ alias gm="git commit -m"
 alias gma="git commit -am"
 alias gb="git branch"
 alias gc="git checkout"
-alias gra="git remote add"
-alias grr="git remote rm"
 alias gpu="git pull"
 alias grh="git reset HEAD"
 alias undo="git reset --soft HEAD^"
