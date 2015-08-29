@@ -36,25 +36,6 @@ alias w='cd ${DIR}'
 alias a.="atom ."
 alias a="atom"
 
-# git
-alias g="git"
-alias ga="git add"
-alias gau='git add -u'
-alias gl="git log"
-alias gs="git status"
-alias gss="git status --short"
-alias gd="git diff"
-alias gds="git diff --staged"
-alias gdt="git difftool"
-alias gdts="git difftool --staged"
-alias gm="git commit -m"
-alias gma="git commit -am"
-alias gb="git branch"
-alias gc="git checkout"
-alias gpu="git pull"
-alias grh="git reset HEAD"
-alias undo="git reset --soft HEAD^"
-
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
@@ -73,11 +54,5 @@ fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-### Adding npm
-export PATH=$PATH:/usr/local/share/npm/bin
-
-### Adding Activator
-export PATH=$PATH:/Users/dmarcella/src/activator-1.2.3
 
 source ~/.jump
