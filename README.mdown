@@ -16,7 +16,7 @@ This is a basic checklist I follow to set up a new Mac's development environment
 ### 1. Prep OS X
 
 - Download and install latest version of Xcode from the Mac App Store
-- Download and install Xcode command line tools
+- Download and install Xcode command line tools from https://developer.apple.com/downloads/.
 
 ### 2. Download dependencies
 
@@ -31,4 +31,14 @@ This is a basic checklist I follow to set up a new Mac's development environment
 
 - Load [`.bashrc`](/master/.bashrc)
 - Load [`.gitconfig`](/master/.gitconfig) contents into the global `~/.gitconfig`
-- Tweak color scheme
+- Load up the Ocean theme from https://github.com/mdo/ocean-terminal
+
+### 5. Setup Atom
+- Install favorite packages
+  - atom-wrap-in-tag
+  - editorconfig
+  - git-plus
+  - highlight-selected
+  - linter
+  - linter-eslint
+  - pretty-json
