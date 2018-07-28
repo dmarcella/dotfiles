@@ -4,7 +4,7 @@
 
 [core]
 	quotepath = false
-	excludesfile = /Users/dmarcella/.gitignore_global
+	excludesfile = /Users/davidmarcella/.gitignore_global
 
 [color]
 	branch = auto
@@ -12,29 +12,17 @@
 	status = auto
 	ui = auto
 
-################################################################################
-
-[diff]
+[merge]
 	tool = Kaleidoscope
-
-[difftool]
-	prompt = false
 
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
-[merge]
-	tool = Kaleidoscope
-
-[mergetool]
+[difftool]
 	prompt = false
 
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-
-################################################################################
-# http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
+[diff]
+	tool = Kaleidoscope
 
 [alias]
 	############ Explore your history, the commits and the code
@@ -44,6 +32,7 @@
 	lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
 	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
 	fl = log -u
+	aliases = config --get-regexp alias
 
 	############ Log commands to inspect (recent) history
 	dl = "!git ll -1"

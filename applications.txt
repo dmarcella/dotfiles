@@ -1,0 +1,22 @@
+1Blocker
+1Password
+Bartender
+BetterTouchTool
+Deliveries
+Docker
+Dropbox
+Evernote
+FireFox Nightly
+Google Chrome Dev
+Kaleidoscope
+Paw
+Pixelmator
+Slack
+Sonos
+Spotify
+Spotify Notifications
+Tweetbot
+Visual Studio Code
+Wallcat
+Hazel
+Homebrew

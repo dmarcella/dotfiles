@@ -18,27 +18,25 @@ This is a basic checklist I follow to set up a new Mac's development environment
 - Download and install latest version of Xcode from the Mac App Store
 - Download and install Xcode command line tools from https://developer.apple.com/downloads/.
 
-### 2. Download dependencies
-
-- Download and run the [Node.js Mac installer](http://nodejs.org/download/)
-
-### 3. Secure Git(Hub) access
+### 2. Secure Git(Hub) access
 
 - [Generate new SSH key](https://help.github.com/articles/generating-ssh-keys/)
 - [Generate an access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) for Terminal to auth your GitHub account when 2FA is enabled
 
-### 4. Prep Terminal.app
+### 3. Prep Terminal.app
 
 - Load [`.bashrc`](/master/.bashrc)
+- Load [`.profile`](/master/.profile)
 - Load [`.gitconfig`](/master/.gitconfig) contents into the global `~/.gitconfig`
+- Load [`.jump`](/master/.jump)
+- How to create a symlink `ln -s /path/to/original /path/to/symlink`
 - Load up the Ocean theme from https://github.com/mdo/ocean-terminal
 
-### 5. Setup Atom
+### 4. How to use Jump file
+- `mark ${alias}` will setup a shortcut
+- `jump ${alias}` will jump to the specific shortcut
+- `jump` will take you to the .mark file and than you can `ls` to see a list of jumps
+
+### 4. Setup Visual Studio Code
 - Install favorite packages
-  - atom-wrap-in-tag
-  - editorconfig
-  - git-plus
-  - highlight-selected
-  - linter
-  - linter-eslint
-  - pretty-json
+  - Settings Sync
