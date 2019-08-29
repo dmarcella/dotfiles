@@ -3,7 +3,6 @@
 Bartender
 BetterTouchTool
 Deliveries
-Docker
 Dropbox
 Evernote
 FireFox Nightly
@@ -14,7 +13,6 @@ Pixelmator
 Slack
 Sonos
 Spotify
-Spotify Notifications
 Tweetbot
 Visual Studio Code
 Wallcat
