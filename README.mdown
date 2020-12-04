@@ -10,6 +10,7 @@ This is a basic checklist I follow to set up a new Mac's development environment
 | `.gitignore` | The ignore file that I use everywhere. |
 | `.jump` | Quickly navigate your filesystem from the command-line. |
 | `.brew` | Downloads my most used homebrew packages. |
+| `.zshrc` | Customizes the Terminal.app prompt and echos the currently checked out Git branch. |
 
 ## Checklist
 
@@ -29,6 +30,7 @@ This is a basic checklist I follow to set up a new Mac's development environment
 - Load [`.profile`](/master/.profile)
 - Load [`.gitconfig`](/master/.gitconfig) contents into the global `~/.gitconfig`
 - Load [`.jump`](/master/.jump)
+- Load [`.zshrc`](/master/.zshrc)
 - How to create a symlink `ln -s /path/to/original /path/to/symlink`
 - Load up the Ocean theme from https://github.com/mdo/ocean-terminal
 

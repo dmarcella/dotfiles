@@ -2,11 +2,11 @@
 1Password
 Bartender
 BetterTouchTool
+Brave Browser Dev
 Deliveries
-Dropbox
 Evernote
 FireFox Nightly
-Google Chrome Dev
+Homebrew
 Kaleidoscope
 Paw
 Pixelmator
@@ -16,5 +16,3 @@ Spotify
 Tweetbot
 Visual Studio Code
 Wallcat
-Hazel
-Homebrew
