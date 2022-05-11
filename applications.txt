@@ -4,7 +4,6 @@ Bartender
 BetterTouchTool
 Brave Browser Dev
 Deliveries
-Evernote
 FireFox Nightly
 Homebrew
 Kaleidoscope
@@ -15,4 +14,3 @@ Sonos
 Spotify
 Tweetbot
 Visual Studio Code
-Wallcat
