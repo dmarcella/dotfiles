@@ -40,5 +40,11 @@ This is a basic checklist I follow to set up a new Mac's development environment
 - `jump` will take you to the .mark file and than you can `ls` to see a list of jumps
 
 ### 4. Setup Visual Studio Code
-- Install favorite packages
+- Install favorite extensions
   - Settings Sync
+  - EditorConfig
+  - ESLint
+  - GitLens
+  - One Dark Pro
+  - Prettier
+  - TypeScript Error Translator
