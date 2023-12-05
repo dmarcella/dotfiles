@@ -12,18 +12,6 @@
 	status = auto
 	ui = auto
 
-[merge]
-	tool = Kaleidoscope
-
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-
-[difftool]
-	prompt = false
-
-[diff]
-	tool = Kaleidoscope
-
 [alias]
 	############ Explore your history, the commits and the code
 	l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
