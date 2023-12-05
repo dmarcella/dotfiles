@@ -10,9 +10,4 @@ brew upgrade
 brew install bash-completion
 brew install git
 brew install node
-brew install yarn
-brew install youtube-dl
-brew install deno
-
-# Remove outdated versions from the cellar
-brew cleanup
+brew install yt-dlp
