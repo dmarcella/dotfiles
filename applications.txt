@@ -3,14 +3,12 @@
 Bartender
 BetterTouchTool
 Brave Browser Dev
-Deliveries
 FireFox Nightly
 Homebrew
-Kaleidoscope
+Orion
 Paw
 Pixelmator
 Slack
 Sonos
 Spotify
-Tweetbot
 Visual Studio Code
