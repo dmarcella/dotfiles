@@ -5,7 +5,6 @@ This is a basic checklist I follow to set up a new Mac's development environment
 
 | File | Description |
 | --- | --- |
-| `.bashrc` | Customizes the Terminal.app prompt and echos the currently checked out Git branch. |
 | `.gitconfig` | Global Git configuration to specify my name and email, shortcuts, colors, and more. |
 | `.gitignore` | The ignore file that I use everywhere. |
 | `.jump` | Quickly navigate your filesystem from the command-line. |
@@ -26,8 +25,6 @@ This is a basic checklist I follow to set up a new Mac's development environment
 
 ### 3. Prep Terminal.app
 
-- Load [`.bashrc`](/master/.bashrc)
-- Load [`.profile`](/master/.profile)
 - Load [`.gitconfig`](/master/.gitconfig) contents into the global `~/.gitconfig`
 - Load [`.jump`](/master/.jump)
 - Load [`.zshrc`](/master/.zshrc)
@@ -41,10 +38,6 @@ This is a basic checklist I follow to set up a new Mac's development environment
 
 ### 4. Setup Visual Studio Code
 - Install favorite extensions
-  - Settings Sync
-  - EditorConfig
-  - ESLint
+  - OXC
   - GitLens
   - One Dark Pro
-  - Prettier
-  - TypeScript Error Translator
