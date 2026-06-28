@@ -1,14 +1,14 @@
 1Blocker
 1Password
-Bartender
 BetterTouchTool
 Brave Browser Dev
 FireFox Nightly
-Homebrew
 Orion
-Paw
+Homebrew
 Pixelmator
 Slack
 Sonos
 Spotify
+Ghostty
 Visual Studio Code
+Zed
